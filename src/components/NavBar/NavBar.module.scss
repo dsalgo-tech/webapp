@@ -1,0 +1,36 @@
+@import "../../utils/common.scss";
+
+.container {
+  @extend .flexRow;
+  padding: 0px $ruler-padding;
+  box-sizing: border-box;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $NavBar-height;
+  .logoContainer {
+    @extend .flexRow;
+    img {
+      padding-right: 6px;
+      width: 40px;
+    }
+    .textContainer {
+      @extend .flexRow;
+    }
+  }
+  .linksContainer {
+    @extend .flexRow;
+    a {
+      padding: 5px 20px;
+      text-decoration: none;
+    }
+  }
+  .accountInfoContainer {
+    @extend .flexRow;
+    .imageContainer {
+      @extend .profileImageCircular;
+    }
+  }
+}
