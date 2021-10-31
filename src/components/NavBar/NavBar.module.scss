@@ -1,0 +1,61 @@
+@import "../../utils/common.scss";
+
+.navLinks {
+}
+
+.container {
+  @extend .flexRow;
+  padding: 0px $ruler-padding;
+  box-sizing: border-box;
+  position: fixed;
+  background-color: $clr-bg-1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $NavBar-height;
+  .logoContainer {
+    @extend .flexRow;
+    img {
+      padding-right: 6px;
+      width: 40px;
+    }
+    .textContainer {
+      @extend .flexRow;
+    }
+  }
+  .linksContainer {
+    @extend .flexRow;
+    a {
+      position: relative;
+      color: $clr-text-2;
+      font-size: 0.9rem;
+      padding: 3px;
+      margin: 0px 15px;
+      text-decoration: none;
+      border-bottom: 3px solid $clr-bg-1;
+    }
+    a:hover {
+      color: $clr-text-3;
+    }
+    .activeLink {
+      color: $clr-text-3;
+      @extend .fontWeightMedium;
+    }
+    .activeLink::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 15%;
+      right: 15%;
+      height: 3px;
+      background-color: $clr-text-3;
+      border-radius: 30%;
+    }
+  }
+  .accountInfoContainer {
+    @extend .flexRow;
+    .imageContainer {
+      @extend .profileImageCircular;
+    }
+  }
+}

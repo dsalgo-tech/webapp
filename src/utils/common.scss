@@ -1,9 +1,179 @@
+//Colors
+$clr-light-1: white;
+$clr-light-2: #f2f2f2;
+
+$clr-green-1: #2ec4b6;
+
+$clr-blue-1: #d4e9fb;
+$clr-blue-2: #a0caed;
+$clr-blue-3: #78b6ea;
+$clr-blue-4: #5da9e9;
+
+$clr-red-1: #fcc2c9;
+$clr-red-2: #f67f8e;
+$clr-red-3: #ee5669;
+$clr-red-4: #ef233c;
+
+$clr-dark-1: #aeaeae;
+$clr-dark-2: #717171;
+$clr-dark-3: #292929;
+$clr-dark-4: black;
+
+//Current Theme
+$clr-text-1: #aeaeae;
+$clr-text-2: #717171;
+$clr-text-3: #292929;
+$clr-text-4: black;
+$clr-bg-1: white;
+$clr-bg-2: #f2f2f2;
+
+//Dimensions
+$xs: 300px;
+$sm: 600px;
+$md: 1100px;
+$lg: 1500px;
+//Other
+$NavBar-height: 70px;
+$ruler-padding: 50px;
+
+body {
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+}
+
 .flexRow {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .flexCol {
   @extend .flexRow;
+  flex-direction: column;
+}
+.globalPadding {
+  //While using this, if you have fixed dimensions it is recommended to apply box-sizing:border-box;
+  padding: 20px;
+}
+.profileImageCircular {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  img {
+    object-fit: cover;
+    object-position: top center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//fonts
+//font-thickness
+.fontWeightExtraBold {
+  font-weight: 800;
+}
+.fontWeightBold {
+  font-weight: 700;
+}
+.fontWeightSemiBold {
+  font-weight: 600;
+}
+.fontWeightMedium {
+  font-weight: 500;
+}
+.fontWeightRegular {
+  font-weight: 400;
+}
+.fontWeightLight {
+  font-weight: 300;
+}
+.fontWeightExtraLight {
+  font-weight: 200;
+}
+
+//font-size
+.fontSizeExtraLarge {
+  font-size: 2rem;
+}
+.fontSizeLarge {
+  font-size: 1.5rem;
+}
+.fontSizeMedium {
+  font-size: 1.17rem;
+}
+.fontSizeRegular {
+  font-size: 1rem;
+}
+.fontSizeSmall {
+  font-size: 0.83rem;
+}
+.fontSizeExtraSmall {
+  font-size: 0.75rem;
+}
+
+.h1 {
+  @extend .fontSizeExtraLarge;
+  @extend .fontWeightSemiBold;
+  color: $clr-text-3;
+  line-height: 1.5rem;
+}
+.h2 {
+  @extend .fontSizeLarge;
+  @extend .fontWeightSemiBold;
+  color: $clr-text-3;
+  line-height: 1rem;
+}
+.h3 {
+  @extend .fontSizeMedium;
+  @extend .fontWeightSemiBold;
+  color: $clr-text-3;
+  line-height: 0.8rem;
+}
+.h4 {
+  @extend .fontSizeRegular;
+  @extend .fontWeightSemiBold;
+  color: $clr-text-3;
+  line-height: 0.5rem;
+}
+.h5 {
+  @extend .fontSizeSmall;
+  @extend .fontWeightSemiBold;
+  color: $clr-text-3;
+}
+.h6 {
+  @extend .fontSizeExtraSmall;
+  @extend .fontWeightSemiBold;
+  color: $clr-text-3;
+}
+.pg {
+  //paragraph
+  @extend .fontSizeRegular;
+  @extend .fontWeightRegular;
+  color: $clr-text-1;
+}
+
+//Media Quries
+@media only screen and (max-width: $lg) {
+  //For Large Screen $lg:1500px, Will Run Between (1100px - 1500px)
+  .globalPadding {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: $md) {
+  //For Medium Screen $md:1100px, Will Run Between (600px - 1100px)
+  .globalPadding {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: $sm) {
+  //For Small Screen $sm:600px, Will Run Between (300px - 600px)
+  .globalPadding {
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: $xs) {
+  //For Extra Small Screen $xs:300px, Will Run Below 300px
 }
