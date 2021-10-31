@@ -19,13 +19,21 @@ $clr-dark-2: #717171;
 $clr-dark-3: #292929;
 $clr-dark-4: black;
 
+//Current Theme
+$clr-text-1: #aeaeae;
+$clr-text-2: #717171;
+$clr-text-3: #292929;
+$clr-text-4: black;
+$clr-bg-1: white;
+$clr-bg-2: #f2f2f2;
+
 //Dimensions
 $xs: 300px;
 $sm: 600px;
 $md: 1100px;
 $lg: 1500px;
 //Other
-$NavBar-height: 50px;
+$NavBar-height: 70px;
 $ruler-padding: 50px;
 
 body {
@@ -58,26 +66,90 @@ body {
     height: 100%;
   }
 }
-.fontExtraBold {
+
+//fonts
+//font-thickness
+.fontWeightExtraBold {
   font-weight: 800;
 }
-.fontBold {
+.fontWeightBold {
   font-weight: 700;
 }
-.fontSemiBold {
+.fontWeightSemiBold {
   font-weight: 600;
 }
-.fontMedium {
+.fontWeightMedium {
   font-weight: 500;
 }
-.fontRegular {
+.fontWeightRegular {
   font-weight: 400;
 }
-.fontLight {
+.fontWeightLight {
   font-weight: 300;
 }
-.fontExtraLight {
+.fontWeightExtraLight {
   font-weight: 200;
+}
+
+//font-size
+.fontSizeExtraLarge {
+  font-size: 2rem;
+}
+.fontSizeLarge {
+  font-size: 1.5rem;
+}
+.fontSizeMedium {
+  font-size: 1.17rem;
+}
+.fontSizeRegular {
+  font-size: 1rem;
+}
+.fontSizeSmall {
+  font-size: 0.83rem;
+}
+.fontSizeExtraSmall {
+  font-size: 0.75rem;
+}
+
+.h1 {
+  @extend .fontSizeExtraLarge;
+  @extend .fontWeightSemiBold;
+  color: $clr-text-3;
+  line-height: 1.5rem;
+}
+.h2 {
+  @extend .fontSizeLarge;
+  @extend .fontWeightSemiBold;
+  color: $clr-text-3;
+  line-height: 1rem;
+}
+.h3 {
+  @extend .fontSizeMedium;
+  @extend .fontWeightSemiBold;
+  color: $clr-text-3;
+  line-height: 0.8rem;
+}
+.h4 {
+  @extend .fontSizeRegular;
+  @extend .fontWeightSemiBold;
+  color: $clr-text-3;
+  line-height: 0.5rem;
+}
+.h5 {
+  @extend .fontSizeSmall;
+  @extend .fontWeightSemiBold;
+  color: $clr-text-3;
+}
+.h6 {
+  @extend .fontSizeExtraSmall;
+  @extend .fontWeightSemiBold;
+  color: $clr-text-3;
+}
+.pg {
+  //paragraph
+  @extend .fontSizeRegular;
+  @extend .fontWeightRegular;
+  color: $clr-text-1;
 }
 
 //Media Quries

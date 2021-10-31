@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./NavBar.module.scss";
 import { NavLink } from "react-router-dom";
+import clsx from "clsx";
 import { IconButton, Menu, MenuItem, Fade } from "@mui/material";
 import logo from "../../assets/images/logo.svg";
 import expand from "../../assets/images/expand.svg";
@@ -12,15 +13,42 @@ const NavBar = () => {
       <div className={styles.logoContainer}>
         <img src={logo} alt="dsalgo.tech" />
         <div className={styles.textContainer}>
-          <p className={styles.fontMedium}>dsalgo.</p>
-          <p className={styles.fontLight}>tech</p>
+          <p className={clsx(styles.fontWeightMedium)}>dsalgo.</p>
+          <p className={clsx(styles.fontWeightLight)}>tech</p>
         </div>
       </div>
       <div className={styles.linksContainer}>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/questions">Questions</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-        <NavLink to="/about">About</NavLink>
+        <NavLink
+          exact
+          className={clsx(styles.pg)}
+          to="/"
+          activeClassName={clsx(styles.activeLink)}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          className={clsx(styles.pg)}
+          to="/questions"
+          activeClassName={clsx(styles.activeLink)}
+        >
+          Questions
+        </NavLink>
+        <NavLink
+          exact
+          className={clsx(styles.pg)}
+          to="/contact"
+          activeClassName={clsx(styles.activeLink)}
+        >
+          Contact
+        </NavLink>
+        <NavLink
+          exact
+          className={clsx(styles.pg)}
+          to="/about"
+          activeClassName={clsx(styles.activeLink)}
+        >
+          About
+        </NavLink>
       </div>
       <div className={styles.accountInfoContainer}>
         <div className={styles.imageContainer}>
